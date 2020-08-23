@@ -1,7 +1,7 @@
 function solveMaze(maze) {
   let visited = maze;
   const paths = [];
-  let route = [];
+  const route = [];
   function mazeRunner(maze, visited, row, column) {
     const directionRow = [0, 0, -1, 1]; // left, right, up, down
     const directionColumn = [-1, 1, 0, 0]; // left, right, up, down
