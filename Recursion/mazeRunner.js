@@ -45,10 +45,7 @@ function solveMaze(maze) {
           // currentPath = ''
           // // visited[nextRow][nextColumn] = '-'
           // visited = maze
-        } else {
-
-        }
-
+        } 
       }
     }
   }
