@@ -28,7 +28,7 @@ function solveMaze(maze) {
       currentPath = []
 
     } else {
-
+      //this console log is showing the program gets wonky when it hits a dead end
       console.log(currentPath)
       for (let i = 0; i < directionRow.length; i++) {
         const nextRow = row + directionRow[i]
