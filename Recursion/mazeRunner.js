@@ -25,7 +25,7 @@ function solveMaze(maze) {
     if (maze[row][column] === "e") {
       paths.push(route.join("")); //add route to successful paths
     } else { // recursive case
-      visited[row][column] = "-";
+      visited[row][column] = "-"; // mark as visited
       for (let i = 0; i < directionRow.length; i++) {
         const nextRow = row + directionRow[i];
         const nextColumn = column + directionColumn[i];
@@ -35,7 +35,7 @@ function solveMaze(maze) {
           route.pop(); // take the direction off the current path
         }
       }
-      visited[row][column] = ' '
+      visited[row][column] = ' ' // unmark as visited
     }
     return paths;
   }
