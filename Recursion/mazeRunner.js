@@ -8,18 +8,18 @@ function solveMaze(maze) {
   let visited = maze
   let currentPath = []
   let allPaths = []
+
+  function checkMove(maze, visited, row, column) {
+    if((row >= 0) && (row < maze.length) && (column >= 0) && (column < maze[row].length) && (maze[row][column] !== '*') && (visited[row][column] !== '-')) {
+      return true 
+    }
+    return false
+  }
   
   function mazeRunner(maze, visited, row, column) {
     const directionRow = [0,0,-1,1] // left, right, up, down
     const directionColumn = [-1,1,0,0] // left, right, up, down
     const directions = ['L', 'R', 'U', 'D']
-
-    function checkMove(maze, visited, row, column) {
-      if((row >= 0) && (row < maze.length) && (column >= 0) && (column < maze[row].length) && (maze[row][column] !== '*') && (visited[row][column] !== '-')) {
-        return true 
-      }
-      return false
-    }
   
     //base case 
     if (maze[row][column] === 'e') {
